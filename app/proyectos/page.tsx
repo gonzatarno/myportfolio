@@ -123,33 +123,6 @@ export default function ProyectosPage() {
           </Link>
         </div>
 
-        {/* Proyecto 4 - Agenda de contactos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 group">
-          <Link href="/proyectos/contactos" className="block">
-            <div className="flex flex-col justify-center">
-              <h2 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-[#f8c226]">
-                {t("projects.contacts.title")}
-              </h2>
-              <p className="text-gray-300 mb-4">{t("projects.contacts.description")}</p>
-              <div className="inline-flex items-center text-white hover:text-[#f8c226] transition-colors">
-                {t("projects.viewProject")}{" "}
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </div>
-            </div>
-          </Link>
-          <Link href="/proyectos/contactos" className="block">
-            <div className="bg-[#2a2259] rounded-xl overflow-hidden mb-4 transition-all duration-300 group-hover:bg-[#413287] group-hover:shadow-md">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_Contacts-JE5VZOsKlYpXjnirzjPiSOmOrkFdta.svg"
-                alt={t("projects.contacts.title")}
-                width={500}
-                height={400}
-                className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
-              />
-            </div>
-          </Link>
-        </div>
-
         {/* Proyecto 5 - Rediseño de Btrader - Temporalmente en construcción */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 group">
           <div className="flex flex-col justify-center">
