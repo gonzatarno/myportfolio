@@ -44,4 +44,4 @@ export default function RootLayout({
 
 
 
-import './globals.css'
+import '../styles/globals.css'
