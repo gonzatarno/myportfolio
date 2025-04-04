@@ -8,7 +8,7 @@
   "start": "next start",
   "lint": "next lint",
   "clean": "rm -rf .next && rm -rf node_modules/.cache"
-  }
+  },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
     "@hookform/resolvers": "^3.9.1",
