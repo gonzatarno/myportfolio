@@ -7,7 +7,13 @@
   --font-poppins: "Poppins", sans-serif;
 }
 
-html,
+
+html {
+  background-color: #231955;
+  color: white;
+  font-family: var(--font-poppins);
+}
+
 body {
   background-color: #231955;
   color: white;
