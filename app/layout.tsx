@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
-import "../styles/globals.css"
+import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import ScrollToTop from "@/components/scroll-to-top"
 import CustomCursor from "@/components/custom-cursor"
@@ -44,4 +44,4 @@ export default function RootLayout({
 
 
 
-import '../styles/globals.css'
+import './globals.css'
