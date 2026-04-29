@@ -3,442 +3,306 @@
 import { useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { motion } from "framer-motion"
+import { ArrowUpRight, Sparkles } from "lucide-react"
 import SiteHeader from "@/components/site-header"
+import SiteFooter from "@/components/site-footer"
 import { useLanguage } from "@/contexts/language-context"
 
+type Project = {
+  href: string
+  title: string
+  meta: string
+  desc: string
+  tags: string[]
+  image?: string
+  external?: boolean
+  badge?: { label: string; tone: "live" | "new" | "soon" }
+}
+
 export default function ProyectosPage() {
-  const graphicDesignRef = useRef<HTMLDivElement>(null)
-  const { t } = useLanguage()
+  const graphicRef = useRef<HTMLDivElement>(null)
+  const { t, language } = useLanguage()
 
   useEffect(() => {
-    // Verificar si hay un hash en la URL
     if (typeof window !== "undefined" && window.location.hash === "#graphic-design") {
-      // Usar setTimeout para asegurar que el DOM esté completamente cargado
-      setTimeout(() => {
-        graphicDesignRef.current?.scrollIntoView({ behavior: "smooth" })
-      }, 500)
+      setTimeout(() => graphicRef.current?.scrollIntoView({ behavior: "smooth" }), 400)
     }
   }, [])
 
+  const product: Project[] = [
+    {
+      href: "/proyectos/tickets",
+      title: t("projects.tickets.title"),
+      meta: "Botmaker · 2024",
+      desc: t("projects.tickets.description"),
+      tags: ["Product", "Enterprise"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_Tickets-mvIX3rYcmRZ8lkJb7IlJSS5vO7SEUU.png",
+    },
+    {
+      href: "/proyectos/bots-ia",
+      title: t("projects.bots.title"),
+      meta: "Botmaker · 2024",
+      desc: t("projects.bots.description"),
+      tags: ["AI", "Product"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_IA-z8o8mT6hl1blpHkWxKykUrJD4rk8yM.png",
+    },
+    {
+      href: "/proyectos/callbots",
+      title: t("projects.callbots.title"),
+      meta: "Botmaker · 2023",
+      desc: t("projects.callbots.description"),
+      tags: ["Voice", "AI"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_Calls-aBKMaHS1PqfdyH9KnfmXBRmpABD6ti.svg",
+    },
+    {
+      href: "/proyectos/donde-vamos",
+      title: t("projects.dondevamos.title"),
+      meta: "Personal · 2022",
+      desc: t("projects.dondevamos.description"),
+      tags: ["Mobile", "Concept"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_DondeVamos-QisUgONaAGl7hEV49o0UGVr1gcTg7P.png",
+    },
+    {
+      href: "/proyectos/fast-app",
+      title: t("projects.fastapp.title"),
+      meta: "UADE · 2021",
+      desc: t("projects.fastapp.description"),
+      tags: ["AR", "Accessibility"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_FastApp-siVOrZGWPAFSSYesmEOV0aBH5vWLPD.png",
+    },
+    {
+      href: "/proyectos/tierra-iberica",
+      title: t("projects.tierraiberica.title"),
+      meta: "Freelance · 2022",
+      desc: t("projects.tierraiberica.description"),
+      tags: ["Web", "E-commerce"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_TI-WERorf4kjKNGvBkBXqux0Lltaej7rV.png",
+    },
+  ]
+
+  const graphic: Project[] = [
+    {
+      href: "/proyectos/vinilos",
+      title: t("projects.vinilos.title"),
+      meta: language === "es" ? "Editorial · 2021" : "Editorial · 2021",
+      desc: t("projects.vinilos.description"),
+      tags: ["Cover", "Print"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_Vinilo-8Qi3esSdjVoI4gzAFtyPs0OjHDrH1v.png",
+    },
+    {
+      href: "/proyectos/arco",
+      title: t("projects.arco.title"),
+      meta: language === "es" ? "Conceptual · 2020" : "Conceptual · 2020",
+      desc: t("projects.arco.description"),
+      tags: ["Concept", "Print"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_arco-KH1pb0bNiFDVzmzDoAUuvVFwI9Ch7n.png",
+    },
+    {
+      href: "/proyectos/videofono",
+      title: t("projects.videofono.title"),
+      meta: "UADE · 2021",
+      desc: t("projects.videofono.description"),
+      tags: ["3D", "Cyberpunk"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_videofono-1KCCTFx3XfGJOtp28Qw8w8TvyD0zB9.png",
+    },
+    {
+      href: "/proyectos/philip-dick",
+      title: t("projects.philipdick.title"),
+      meta: language === "es" ? "Editorial · 2021" : "Editorial · 2021",
+      desc: t("projects.philipdick.description"),
+      tags: ["Editorial", "Illustration"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_dick-VuilMsLOnH4UKzdUJU4HHEyJv3UdXz.png",
+    },
+    {
+      href: "/proyectos/descifrando-amistades",
+      title: t("projects.amistades.title"),
+      meta: "UADE · 2020",
+      desc: t("projects.amistades.description"),
+      tags: ["Concept", "Branding"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_amistades-EIymm8u55escRozi6YOX6AhXAaB0VK.png",
+    },
+    {
+      href: "/proyectos/friends",
+      title: t("projects.friends.title"),
+      meta: language === "es" ? "Evento · 2019" : "Event · 2019",
+      desc: t("projects.friends.description"),
+      tags: ["Event", "Branding"],
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_friends-ihXUAc2yUMYCwdbqqad8v6DsaY05Vn.png",
+    },
+  ]
+
   return (
-    <main className="min-h-screen bg-[#231955] text-white">
-      {/* Header fijo */}
+    <main className="relative min-h-screen bg-bg text-fg">
       <SiteHeader />
 
-      {/* Espacio para compensar el header fijo */}
-      <div className="pt-24"></div>
-
-      {/* Hero Section */}
-      <div className="mx-auto max-w-[1000px] px-5 sm:px-6 md:px-8 mb-16">
-        <div className="text-left">
-          <h1 className="text-4xl md:text-5xl font-bold mb-12">{t("projects.myProjects")}</h1>
+      {/* HERO */}
+      <section className="relative bg-spotlight pt-32 pb-16 md:pt-44 md:pb-20">
+        <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
+          <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-fg-dim mb-8 flex items-center gap-3">
+            <span className="inline-block w-8 h-px bg-lime" />
+            {language === "es" ? "Proyectos" : "Projects"}
+          </div>
+          <h1 className="font-display text-[12vw] md:text-[8vw] lg:text-[120px] leading-[0.92] tracking-[-0.04em] font-medium max-w-5xl">
+            {language === "es" ? <>Lo que <span className="text-fg-dim">construí.</span></> : <>What I've <span className="text-fg-dim">built.</span></>}
+          </h1>
         </div>
-      </div>
+      </section>
 
-      {/* Proyectos Grid */}
-      <div className="mx-auto max-w-[1000px] px-5 sm:px-6 md:px-8 mb-24">
-        {/* Título de sección Product Design */}
-        <div className="mb-12 relative">
-          <div className="absolute left-0 w-full h-px bg-gradient-to-r from-purple-light/50 via-purple/80 to-purple-light/50"></div>
-          <h2 className="text-3xl font-bold py-4 inline-block relative">
-            <span className="bg-[#231955] pr-6 relative z-10">{t("projects.categories.product")}</span>
-            <span className="absolute -bottom-1 left-0 w-24 h-1 bg-[#f8c226]"></span>
-          </h2>
-        </div>
-
-        {/* Primera fila - 2 columnas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-          {/* Proyecto 1 */}
-          <div className="group">
-            <Link href="/proyectos/tickets" className="block">
-              <div className="bg-[#2a2259] rounded-xl overflow-hidden transition-all duration-300 group-hover:bg-[#413287] group-hover:shadow-md">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_Tickets-mvIX3rYcmRZ8lkJb7IlJSS5vO7SEUU.png"
-                  alt={t("projects.tickets.title")}
-                  width={500}
-                  height={400}
-                  className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
-                />
+      {/* FEATURED — Finy + Prototipo Botmaker */}
+      <section className="relative py-12 md:py-20">
+        <div className="mx-auto max-w-[1280px] px-5 sm:px-8 grid md:grid-cols-2 gap-4 md:gap-6">
+          {/* FINY */}
+          <Link href="https://www.finyapp.io" target="_blank" rel="noopener noreferrer" className="group relative rounded-[28px] overflow-hidden border border-line bg-gradient-to-br from-lime/10 via-transparent to-transparent hover:border-lime/40 transition-colors">
+            <div className="absolute -top-32 -right-32 w-[400px] h-[400px] rounded-full bg-lime/15 blur-[120px]" />
+            <div className="relative p-8 md:p-10">
+              <div className="flex items-center justify-between mb-6">
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-lime text-bg text-[10px] font-mono uppercase tracking-[0.15em]">
+                  <Sparkles className="w-3 h-3" /> Live
+                </span>
+                <ArrowUpRight className="w-5 h-5 text-fg-dim group-hover:text-lime group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
               </div>
-              <h2 className="text-2xl font-bold mb-2 mt-4 transition-colors duration-300 group-hover:text-[#f8c226]">
-                {t("projects.tickets.title")}
+              <h2 className="font-display text-5xl md:text-6xl font-semibold tracking-[-0.04em] leading-[0.95] mb-4">
+                Finy<span className="text-lime">.</span>
               </h2>
-              <p className="text-gray-300 mb-4">{t("projects.tickets.description")}</p>
-              <div className="inline-flex items-center text-white hover:text-[#f8c226] transition-colors">
-                {t("projects.viewProject")}{" "}
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <p className="text-fg-dim leading-relaxed text-pretty max-w-md mb-6">
+                {language === "es" ? "Asistente financiero con IA. Diseñé y desarrollé la app entera." : "AI finance assistant. I designed and built the whole app."}
+              </p>
+              <div className="flex flex-wrap gap-2 text-[11px] font-mono uppercase tracking-[0.15em]">
+                {["Founder", "Design + Code", "AI UX"].map((t) => (
+                  <span key={t} className="px-2.5 py-1 rounded-full border border-line text-fg-dim">{t}</span>
+                ))}
               </div>
-            </Link>
-          </div>
+            </div>
+            <div className="relative px-8 md:px-10 pb-8 md:pb-10">
+              <div className="rounded-2xl overflow-hidden border border-line/60">
+                <Image src="/finy/4_ia_options.png" alt="Finy" width={1360} height={837} className="w-full h-auto" />
+              </div>
+            </div>
+          </Link>
 
-          {/* Proyecto 2 */}
-          <div className="group">
-            <Link href="/proyectos/bots-ia" className="block">
-              <div className="bg-[#2a2259] rounded-xl overflow-hidden transition-all duration-300 group-hover:bg-[#413287] group-hover:shadow-md">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_IA-z8o8mT6hl1blpHkWxKykUrJD4rk8yM.png"
-                  alt={t("projects.bots.title")}
-                  width={500}
-                  height={400}
-                  className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
-                />
+          {/* PROTOTIPO BOTMAKER */}
+          <Link href="/proyectos/prototipo-botmaker" className="group relative rounded-[28px] overflow-hidden border border-line bg-bg-elev hover:border-lime/40 transition-colors flex flex-col">
+            <div className="absolute -bottom-32 -left-20 w-[400px] h-[400px] rounded-full bg-blue-500/10 blur-[120px]" />
+            <div className="relative p-8 md:p-10">
+              <div className="flex items-center justify-between mb-6">
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-bg text-blue-300 text-[10px] font-mono uppercase tracking-[0.15em] border border-blue-500/30">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+                  {language === "es" ? "Interactivo" : "Interactive"}
+                </span>
+                <ArrowUpRight className="w-5 h-5 text-fg-dim group-hover:text-lime group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
               </div>
-              <h2 className="text-2xl font-bold mb-2 mt-4 transition-colors duration-300 group-hover:text-[#f8c226]">
-                {t("projects.bots.title")}
+              <h2 className="font-display text-5xl md:text-6xl font-semibold tracking-[-0.04em] leading-[0.95] mb-4">
+                {language === "es" ? "Automation Canvas" : "Automation Canvas"}
               </h2>
-              <p className="text-gray-300 mb-4">{t("projects.bots.description")}</p>
-              <div className="inline-flex items-center text-white hover:text-[#f8c226] transition-colors">
-                {t("projects.viewProject")}{" "}
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <p className="text-fg-dim leading-relaxed text-pretty max-w-md mb-6">
+                {language === "es" ? "Prototipo navegable para Botmaker. Agentes de IA, orquestador y canvas de automatizaciones — todo interactivo." : "Navigable prototype for Botmaker. AI agents, orchestrator and automation canvas — all interactive."}
+              </p>
+              <div className="flex flex-wrap gap-2 text-[11px] font-mono uppercase tracking-[0.15em]">
+                {["Prototype", "React Flow", "AI Agents"].map((t) => (
+                  <span key={t} className="px-2.5 py-1 rounded-full border border-line text-fg-dim">{t}</span>
+                ))}
               </div>
-            </Link>
-          </div>
-        </div>
-
-        {/* Proyecto 3 - Callbots con texto superpuesto en la esquina superior derecha */}
-        <div className="mb-24">
-          <Link href="/proyectos/callbots" className="block">
-            <div className="relative rounded-xl overflow-hidden group">
-              <div className="bg-[#2a2259] rounded-xl overflow-hidden transition-all duration-300 group-hover:bg-[#413287] group-hover:shadow-md">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_Calls-aBKMaHS1PqfdyH9KnfmXBRmpABD6ti.svg"
-                  alt={t("projects.callbots.title")}
-                  width={1200}
-                  height={600}
-                  className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.01]"
-                />
+            </div>
+            {/* Pseudo-canvas preview */}
+            <div className="relative mt-auto mx-8 md:mx-10 mb-8 md:mb-10 rounded-2xl border border-line/60 bg-bg overflow-hidden h-[260px]">
+              <div className="absolute inset-0 opacity-40" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0)", backgroundSize: "20px 20px" }} />
+              <div className="absolute top-6 left-6 px-3 py-2 rounded-lg bg-bg-elev border border-line text-xs font-mono">
+                <span className="text-lime">●</span> trigger.message
               </div>
-              <div className="p-6 bg-[#231955] md:absolute md:bottom-0 md:right-0 md:w-2/5 md:rounded-tl-xl transition-all duration-300 group-hover:bg-[#413287]">
-                <h2 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-[#f8c226]">
-                  {t("projects.callbots.title")}
-                </h2>
-                <p className="text-gray-300 mb-4">{t("projects.callbots.description")}</p>
-                <div className="inline-flex items-center text-white hover:text-[#f8c226] transition-colors">
-                  {t("projects.viewProject")}{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </div>
+              <div className="absolute top-24 left-1/2 -translate-x-1/2 px-3 py-2 rounded-lg bg-bg-elev border border-lime/40 text-xs font-mono">
+                <span className="text-lime">◆</span> agent.classify
+              </div>
+              <div className="absolute bottom-6 right-6 px-3 py-2 rounded-lg bg-bg-elev border border-line text-xs font-mono">
+                <span className="text-blue-400">▸</span> integration.sheets
+              </div>
+              <svg className="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none">
+                <line x1="20%" y1="22%" x2="50%" y2="38%" stroke="rgba(197,247,60,0.4)" strokeWidth="1" strokeDasharray="3 3" />
+                <line x1="50%" y1="50%" x2="85%" y2="78%" stroke="rgba(96,165,250,0.4)" strokeWidth="1" strokeDasharray="3 3" />
+              </svg>
+              <div className="absolute bottom-3 right-3 text-[10px] font-mono uppercase tracking-[0.2em] text-fg-muted">
+                ↗ {language === "es" ? "Click para abrir" : "Click to open"}
               </div>
             </div>
           </Link>
         </div>
+      </section>
 
-        {/* Proyecto 5 - Rediseño de Btrader - Temporalmente en construcción */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 group">
-          <div className="flex flex-col justify-center">
-            <h2 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-[#f8c226]">
-              {t("projects.btrader.title")}
-            </h2>
-            <p className="text-gray-300 mb-4">{t("projects.btrader.description")}</p>
-            <div className="relative inline-block">
-              <span className="inline-flex items-center text-white opacity-50 cursor-not-allowed">
-                {t("projects.viewProject")} <ArrowRight className="ml-2 h-4 w-4" />
-              </span>
-              <div className="absolute left-0 -bottom-8 bg-[#231955] border border-purple/30 rounded-md p-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                Página en construcción
+      {/* PRODUCT DESIGN GRID */}
+      <section className="relative py-20 md:py-28 border-t border-line">
+        <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
+          <div className="flex items-end justify-between mb-12 md:mb-16 gap-6">
+            <div>
+              <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-fg-dim mb-4 flex items-center gap-3">
+                <span className="inline-block w-8 h-px bg-lime" />
+                {t("projects.categories.product")}
               </div>
-            </div>
-          </div>
-          <div className="block relative group">
-            <div className="bg-[#2a2259] rounded-xl overflow-hidden mb-4 transition-all duration-300 group-hover:bg-[#413287] group-hover:shadow-md relative">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_btrader-ltEoh7hUDbVqlZS7NXuEgLyg45COcM.png"
-                alt={t("projects.btrader.title")}
-                width={500}
-                height={700}
-                className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02] group-hover:opacity-30"
-              />
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="bg-[#231955]/80 px-4 py-2 rounded-md text-white font-medium">Próximamente</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Proyecto 6 - DONDE VAMOS con texto superpuesto en el medio */}
-        <div className="mb-24">
-          <Link href="/proyectos/donde-vamos" className="block">
-            <div className="relative rounded-xl overflow-hidden group">
-              <div className="bg-[#2a2259] rounded-xl overflow-hidden transition-all duration-300 group-hover:bg-[#413287] group-hover:shadow-md">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_DondeVamos-QisUgONaAGl7hEV49o0UGVr1gcTg7P.png"
-                  alt={t("projects.dondevamos.title")}
-                  width={1000}
-                  height={600}
-                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.01]"
-                />
-              </div>
-              <div className="p-6 bg-[#231955] md:absolute md:bottom-0 md:left-1/2 md:transform md:-translate-x-1/2 md:w-2/5 md:rounded-t-xl transition-all duration-300 group-hover:bg-[#413287]">
-                <h2 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-[#f8c226]">
-                  {t("projects.dondevamos.title")}
-                </h2>
-                <p className="text-gray-300 mb-4">{t("projects.dondevamos.description")}</p>
-                <div className="inline-flex items-center text-white hover:text-[#f8c226] transition-colors">
-                  {t("projects.viewProject")}{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </div>
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        {/* Proyecto 7 - FAST APP */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 group">
-          <Link href="/proyectos/fast-app" className="block">
-            <div className="flex flex-col justify-center">
-              <h2 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-[#f8c226]">
-                {t("projects.fastapp.title")}
+              <h2 className="font-display text-4xl md:text-6xl font-medium tracking-[-0.03em]">
+                {language === "es" ? "Product Design" : "Product Design"}
               </h2>
-              <p className="text-gray-300 mb-4">{t("projects.fastapp.description")}</p>
-              <div className="inline-flex items-center text-white hover:text-[#f8c226] transition-colors">
-                {t("projects.viewProject")}{" "}
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </div>
             </div>
-          </Link>
-          <Link href="/proyectos/fast-app" className="block">
-            <div className="bg-[#2a2259] rounded-xl overflow-hidden mb-4 transition-all duration-300 group-hover:bg-[#413287] group-hover:shadow-md">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_FastApp-siVOrZGWPAFSSYesmEOV0aBH5vWLPD.png"
-                alt={t("projects.fastapp.title")}
-                width={500}
-                height={400}
-                className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
-              />
-            </div>
-          </Link>
-        </div>
+          </div>
 
-        {/* Proyecto 8 - Tierra Ibérica */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 group">
-          <Link href="/proyectos/tierra-iberica" className="block">
-            <div className="flex flex-col justify-center">
-              <h2 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-[#f8c226]">
-                {t("projects.tierraiberica.title")}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {product.map((p) => <ProjectCard key={p.href} p={p} />)}
+          </div>
+        </div>
+      </section>
+
+      {/* GRAPHIC DESIGN GRID */}
+      <section ref={graphicRef} id="graphic-design" className="relative py-20 md:py-28 border-t border-line">
+        <div className="mx-auto max-w-[1280px] px-5 sm:px-8">
+          <div className="flex items-end justify-between mb-12 md:mb-16 gap-6">
+            <div>
+              <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-fg-dim mb-4 flex items-center gap-3">
+                <span className="inline-block w-8 h-px bg-lime" />
+                {t("projects.categories.graphic")}
+              </div>
+              <h2 className="font-display text-4xl md:text-6xl font-medium tracking-[-0.03em]">
+                {language === "es" ? "Graphic Design" : "Graphic Design"}
               </h2>
-              <p className="text-gray-300 mb-4">{t("projects.tierraiberica.description")}</p>
-              <div className="inline-flex items-center text-white hover:text-[#f8c226] transition-colors">
-                {t("projects.viewProject")}{" "}
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </div>
-            </div>
-          </Link>
-          <Link href="/proyectos/tierra-iberica" className="block">
-            <div className="bg-[#2a2259] rounded-xl overflow-hidden mb-4 transition-all duration-300 group-hover:bg-[#413287] group-hover:shadow-md">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_TI-WERorf4kjKNGvBkBXqux0Lltaej7rV.png"
-                alt={t("projects.tierraiberica.title")}
-                width={500}
-                height={400}
-                className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
-              />
-            </div>
-          </Link>
-        </div>
-
-        {/* Sección de Proyectos de Diseño Gráfico */}
-        <div id="graphic-design" ref={graphicDesignRef} className="mb-24">
-          {/* Título de sección Graphic Design */}
-          <div className="mb-12 relative">
-            <div className="absolute left-0 w-full h-px bg-gradient-to-r from-purple-light/50 via-purple/80 to-purple-light/50"></div>
-            <h2 className="text-3xl font-bold py-4 inline-block relative">
-              <span className="bg-[#231955] pr-6 relative z-10">{t("projects.categories.graphic")}</span>
-              <span className="absolute -bottom-1 left-0 w-24 h-1 bg-[#f8c226]"></span>
-            </h2>
-          </div>
-
-          {/* Proyecto Vinilos */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 items-center group">
-            <Link href="/proyectos/vinilos" className="block">
-              <div className="flex flex-col justify-center">
-                <h3 className="text-2xl font-bold mb-4 transition-colors duration-300 group-hover:text-[#f8c226]">
-                  {t("projects.vinilos.title")}
-                </h3>
-                <p className="text-gray-300 mb-6">{t("projects.vinilos.description")}</p>
-                <div className="inline-flex items-center text-white hover:text-[#f8c226] transition-colors">
-                  {t("projects.viewProject")}{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </div>
-              </div>
-            </Link>
-            <Link href="/proyectos/vinilos" className="block">
-              <div className="rounded-xl overflow-hidden transition-all duration-300 group-hover:bg-[#413287] group-hover:shadow-md">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_Vinilo-8Qi3esSdjVoI4gzAFtyPs0OjHDrH1v.png"
-                  alt={t("projects.vinilos.title")}
-                  width={500}
-                  height={400}
-                  className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
-                />
-              </div>
-            </Link>
-          </div>
-
-          {/* Proyecto Cartas Creativas */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 items-center group">
-            <Link href="/proyectos/arco" className="block">
-              <div className="flex flex-col justify-center">
-                <h3 className="text-2xl font-bold mb-4 transition-colors duration-300 group-hover:text-[#f8c226]">
-                  {t("projects.arco.title")}
-                </h3>
-                <p className="text-gray-300 mb-6">{t("projects.arco.description")}</p>
-                <div className="inline-flex items-center text-white hover:text-[#f8c226] transition-colors">
-                  {t("projects.viewProject")}{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </div>
-              </div>
-            </Link>
-            <Link href="/proyectos/arco" className="block">
-              <div className="rounded-xl overflow-hidden transition-all duration-300 group-hover:bg-[#413287] group-hover:shadow-md">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_arco-KH1pb0bNiFDVzmzDoAUuvVFwI9Ch7n.png"
-                  alt={t("projects.arco.title")}
-                  width={500}
-                  height={400}
-                  className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
-                />
-              </div>
-            </Link>
-          </div>
-
-          {/* Proyecto Videofono 3D */}
-          <div className="mb-24">
-            <div className="block relative group">
-              <div className="bg-[#2a2259] rounded-xl overflow-hidden transition-all duration-300 group-hover:bg-[#413287] group-hover:shadow-md">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_videofono-1KCCTFx3XfGJOtp28Qw8w8TvyD0zB9.png"
-                  alt={t("projects.videofono.title")}
-                  width={500}
-                  height={400}
-                  className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02] group-hover:opacity-30"
-                />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="bg-[#231955]/80 px-4 py-2 rounded-md text-white font-medium">Próximamente</div>
-                </div>
-              </div>
-              <div className="p-6 bg-[#231955] md:absolute md:top-1/4 md:right-0 md:w-2/5 md:rounded-l-xl shadow-lg transition-all duration-300 group-hover:bg-[#413287]">
-                <h3 className="text-2xl font-bold mb-4 transition-colors duration-300 group-hover:text-[#f8c226]">
-                  {t("projects.videofono.title")}
-                </h3>
-                <p className="text-gray-300 mb-6">{t("projects.videofono.description")}</p>
-                <div className="relative inline-block">
-                  <span className="inline-flex items-center text-white opacity-50 cursor-not-allowed">
-                    {t("projects.viewProject")} <ArrowRight className="ml-2 h-4 w-4" />
-                  </span>
-                  <div className="absolute left-0 -bottom-8 bg-[#231955] border border-purple/30 rounded-md p-2 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                    Página en construcción
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
-          {/* Proyecto 9 - Libros PHILIP K. DICK */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 group">
-            <Link href="/proyectos/philip-dick" className="block">
-              <div className="flex flex-col justify-center">
-                <h2 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-[#f8c226]">
-                  {t("projects.philipdick.title")}
-                </h2>
-                <p className="text-gray-300 mb-4">{t("projects.philipdick.description")}</p>
-                <div className="inline-flex items-center text-white hover:text-[#f8c226] transition-colors">
-                  {t("projects.viewProject")}{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </div>
-              </div>
-            </Link>
-            <Link href="/proyectos/philip-dick" className="block">
-              <div className="bg-[#2a2259] rounded-xl overflow-hidden mb-4 transition-all duration-300 group-hover:bg-[#413287] group-hover:shadow-md">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_dick-VuilMsLOnH4UKzdUJU4HHEyJv3UdXz.png"
-                  alt={t("projects.philipdick.title")}
-                  width={500}
-                  height={700}
-                  className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
-                />
-              </div>
-            </Link>
-          </div>
-
-          {/* Proyecto 10 - Desifrando amistades */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 group">
-            <Link href="/proyectos/descifrando-amistades" className="block">
-              <div className="flex flex-col justify-center">
-                <h2 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-[#f8c226]">
-                  {t("projects.amistades.title")}
-                </h2>
-                <p className="text-gray-300 mb-4">{t("projects.amistades.description")}</p>
-                <div className="inline-flex items-center text-white hover:text-[#f8c226] transition-colors">
-                  {t("projects.viewProject")}{" "}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </div>
-              </div>
-            </Link>
-            <Link href="/proyectos/descifrando-amistades" className="block">
-              <div className="bg-[#2a2259] rounded-xl overflow-hidden mb-4 transition-all duration-300 group-hover:bg-[#413287] group-hover:shadow-md">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_amistades-EIymm8u55escRozi6YOX6AhXAaB0VK.png"
-                  alt={t("projects.amistades.title")}
-                  width={500}
-                  height={700}
-                  className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
-                />
-              </div>
-            </Link>
-          </div>
-
-          {/* Proyecto 11 - Proyecto Aniversario FRIENDS */}
-          <div className="mb-24">
-            <Link href="/proyectos/friends" className="block">
-              <div className="relative rounded-xl overflow-hidden group">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Image_friends-ihXUAc2yUMYCwdbqqad8v6DsaY05Vn.png"
-                  alt={t("projects.friends.title")}
-                  width={1200}
-                  height={600}
-                  className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.01]"
-                />
-                <div className="absolute bottom-0 right-0 bg-[#231955] p-8 md:w-2/5 rounded-tl-xl transition-all duration-300 group-hover:bg-[#413287]">
-                  <h2 className="text-2xl font-bold mb-2 transition-colors duration-300 group-hover:text-[#f8c226]">
-                    {t("projects.friends.title")}
-                  </h2>
-                  <p className="text-gray-300 mb-4">{t("projects.friends.description")}</p>
-                  <div className="inline-flex items-center text-white hover:text-[#f8c226] transition-colors">
-                    {t("projects.viewProject")}{" "}
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </div>
-                </div>
-              </div>
-            </Link>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {graphic.map((p) => <ProjectCard key={p.href} p={p} />)}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Footer */}
-      <div className="w-full px-5 sm:px-6 md:px-8">
-        <footer className="mx-auto max-w-[1000px] py-8 border-t border-purple/20">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <Link href="/" className="font-bold text-xl hover:text-purple-light transition-colors">
-              GONZA<span className="text-purple">TARNO</span>
-            </Link>
-            <nav className="hidden md:flex items-center gap-8">
-              <Link href="/" className="text-white hover:text-purple transition-colors">
-                {t("nav.home")}
-              </Link>
-              <Link href="/experiencia" className="text-white hover:text-purple transition-colors">
-                {t("nav.about")}
-              </Link>
-              <Link href="/proyectos" className="text-white hover:text-purple transition-colors">
-                {t("nav.projects")}
-              </Link>
-              <Link href="/contacto" className="text-white hover:text-purple transition-colors">
-                {t("nav.contact")}
-              </Link>
-            </nav>
-          </div>
-        </footer>
-      </div>
+      <SiteFooter />
     </main>
   )
 }
 
+function ProjectCard({ p }: { p: Project }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+    >
+      <Link href={p.href} className="group block rounded-2xl overflow-hidden border border-line bg-bg-elev hover:border-lime/40 transition-colors h-full">
+        {p.image ? (
+          <div className="relative aspect-[4/3] overflow-hidden bg-bg">
+            <Image src={p.image} alt={p.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+            <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-bg/80 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 translate-y-1 group-hover:translate-y-0 transition-all">
+              <ArrowUpRight className="w-4 h-4 text-lime" />
+            </div>
+          </div>
+        ) : null}
+        <div className="p-5">
+          <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-fg-muted mb-2">{p.meta}</div>
+          <h3 className="font-display text-xl font-medium tracking-tight mb-2">{p.title}</h3>
+          <p className="text-sm text-fg-dim leading-relaxed line-clamp-2 mb-4">{p.desc}</p>
+          <div className="flex flex-wrap gap-1.5">
+            {p.tags.map((t) => (
+              <span key={t} className="px-2 py-0.5 text-[10px] font-mono uppercase tracking-[0.15em] rounded-full border border-line text-fg-dim">{t}</span>
+            ))}
+          </div>
+        </div>
+      </Link>
+    </motion.div>
+  )
+}

@@ -83,7 +83,7 @@ const translations = {
     "experience.work.period1": "May 2023 - Presente",
     "experience.work.desc1":
       "Diseño de experiencias de usuario para plataforma de chatbots y automatización de conversaciones.",
-    "experience.work.position2": "Ser. UX/UI Designer",
+    "experience.work.position2": "Ssr. UX/UI Designer",
     "experience.work.period2": "Feb 2022 - May 2023",
     "experience.work.desc2":
       "Diseño de interfaces y experiencias para aplicaciones web y móviles en diversos sectores.",

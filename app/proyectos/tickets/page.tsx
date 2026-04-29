@@ -138,7 +138,7 @@ export default function TicketsProjectPage() {
             <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] px-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Row 1 */}
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-e78XbAZd69PDIOxPgsReRA3zZxESa5.png"
@@ -149,7 +149,7 @@ export default function TicketsProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-yPlRHVZkevC0l0ZT6VvKN5OmiL3HTl.png"
@@ -160,7 +160,7 @@ export default function TicketsProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-zBxpykYWBIdjTIY6DXYDJayZyEMqXp.png"
@@ -173,7 +173,7 @@ export default function TicketsProjectPage() {
                 </div>
 
                 {/* Row 2 */}
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-PxT4YYZGcNVrtqhMFcimLs7ynWJIvC.png"
@@ -184,7 +184,7 @@ export default function TicketsProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-mj7jo9OaHwdupTa2Uear9kgixcvD8j.png"
@@ -195,7 +195,7 @@ export default function TicketsProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-tKWKHxHLOcEK5X4SfSp2HKZv72oTWJ.png"
@@ -208,7 +208,7 @@ export default function TicketsProjectPage() {
                 </div>
 
                 {/* Row 3 */}
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-FFTtadQARi6iZcqj9vNIZpBmoMl4Ug.png"
@@ -219,7 +219,7 @@ export default function TicketsProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-s3lrMrkh4DuXAkODCtNkveF7GAAO12.png"
@@ -230,7 +230,7 @@ export default function TicketsProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-SAq3WOlqdoOBEtM6W60AMwdBhTByCp.png"

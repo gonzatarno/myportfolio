@@ -66,7 +66,7 @@ export default function ContactSectionAlt() {
               {/* Email */}
               <div
                 className={`group p-3 md:p-4 rounded-lg transition-colors relative cursor-pointer ${
-                  emailCopied ? "bg-[#A453EB]" : "bg-[#231955] hover:bg-[#2f2470]"
+                  emailCopied ? "bg-[#A453EB]" : "bg-bg hover:bg-[#2f2470]"
                 }`}
                 onClick={copyEmail}
                 onMouseEnter={() => setIsEmailHovered(true)}
@@ -93,7 +93,7 @@ export default function ContactSectionAlt() {
                 href={contactInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group p-3 md:p-4 bg-[#231955] rounded-lg hover:bg-[#2f2470] transition-colors"
+                className="block group p-3 md:p-4 bg-bg rounded-lg hover:bg-[#2f2470] transition-colors"
               >
                 <div className="flex items-center gap-3 md:gap-4">
                   <Linkedin className="h-5 w-5 md:h-6 md:w-6 text-purple-light" />
@@ -111,7 +111,7 @@ export default function ContactSectionAlt() {
                 href={contactInfo.behance}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group p-3 md:p-4 bg-[#231955] rounded-lg hover:bg-[#2f2470] transition-colors"
+                className="block group p-3 md:p-4 bg-bg rounded-lg hover:bg-[#2f2470] transition-colors"
               >
                 <div className="flex items-center gap-3 md:gap-4">
                   <BehanceIcon className="h-5 w-5 md:h-6 md:w-6 text-purple-light" />

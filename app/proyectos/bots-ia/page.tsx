@@ -149,7 +149,7 @@ export default function BotsIAProjectPage() {
             <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] px-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Row 1 */}
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xt1knW6l5OX3MFpPu5UJX6ogRmLbEI.png"
@@ -160,7 +160,7 @@ export default function BotsIAProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dmHYyiNMY5cUdODurIw7WT23bH6K6t.png"
@@ -171,7 +171,7 @@ export default function BotsIAProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-391JiwV1Oat9ArJtl7lQ6K8BbXZc26.png"
@@ -184,7 +184,7 @@ export default function BotsIAProjectPage() {
                 </div>
 
                 {/* Row 2 */}
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-isZCS7aVTMDrwAEVdP5HxHWIoQVHTy.png"
@@ -195,7 +195,7 @@ export default function BotsIAProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-0WfdZJcYkD4xTuW9L6OTCmMHR5t583.png"
@@ -206,7 +206,7 @@ export default function BotsIAProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-kPkplOUThYniQnXdjWqWSj6XWeaqFJ.png"
@@ -219,7 +219,7 @@ export default function BotsIAProjectPage() {
                 </div>
 
                 {/* Row 3 */}
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-3DRC4HlBmG1neEXlfKYm5lsz63TBRs.png"
@@ -230,7 +230,7 @@ export default function BotsIAProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-k2rJf3JJ89PtVwFSwW8YZPaB03KxWE.png"
@@ -241,7 +241,7 @@ export default function BotsIAProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-eJURdFGHLUjpvm5usxHmyamy3hy85Q.png"

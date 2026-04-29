@@ -11,7 +11,7 @@ export default function ContactoPage() {
   const { t } = useLanguage()
 
   return (
-    <main className="min-h-screen bg-[#231955] text-white">
+    <main className="min-h-screen bg-bg text-white">
       {/* Header fijo */}
       <SiteHeader />
 

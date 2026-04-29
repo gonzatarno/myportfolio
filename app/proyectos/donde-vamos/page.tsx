@@ -7,7 +7,7 @@ import SiteHeader from "@/components/site-header"
 
 export default function DondeVamosProjectPage() {
   return (
-    <main className="min-h-screen bg-[#231955] text-white">
+    <main className="min-h-screen bg-bg text-white">
       {/* Header fijo */}
       <SiteHeader />
 

@@ -218,7 +218,7 @@ export default function PhilipDickProjectPage() {
 
           {/* Portadas de libros - Una debajo de otra */}
           <div className="space-y-12 mb-12">
-            <div className="bg-[#231955] rounded-xl overflow-hidden">
+            <div className="bg-bg rounded-xl overflow-hidden">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Androides_02.jpg-jhkzjs6dOFkaYRvVIjYEzX91ZxXTBL.jpeg"
                 alt={t.books.androids}
@@ -231,7 +231,7 @@ export default function PhilipDickProjectPage() {
               </div>
             </div>
 
-            <div className="bg-[#231955] rounded-xl overflow-hidden">
+            <div className="bg-bg rounded-xl overflow-hidden">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Castillo_05.jpg-necIOWMdp5xdIfDHovBsC09us30zHh.jpeg"
                 alt={t.books.castle}
@@ -244,7 +244,7 @@ export default function PhilipDickProjectPage() {
               </div>
             </div>
 
-            <div className="bg-[#231955] rounded-xl overflow-hidden">
+            <div className="bg-bg rounded-xl overflow-hidden">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Dados_03.jpg-ZOGdtXCrIUAprf1Nin9oM0b1DFRcPm.jpeg"
                 alt={t.books.titan}
@@ -257,7 +257,7 @@ export default function PhilipDickProjectPage() {
               </div>
             </div>
 
-            <div className="bg-[#231955] rounded-xl overflow-hidden">
+            <div className="bg-bg rounded-xl overflow-hidden">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ubik_01.jpg-MQg8EAdnOzwYkbzyUwxDtGExTi74PL.jpeg"
                 alt={t.books.ubik}
@@ -270,7 +270,7 @@ export default function PhilipDickProjectPage() {
               </div>
             </div>
 
-            <div className="bg-[#231955] rounded-xl overflow-hidden">
+            <div className="bg-bg rounded-xl overflow-hidden">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Oscuridad_04.jpg-U8zADZIanlw2InmRGwPPnAr83Yt06c.jpeg"
                 alt={t.books.darkness}

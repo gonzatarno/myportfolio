@@ -141,7 +141,7 @@ export default function ArcoProjectPage() {
   const t = content[language === "en" ? "en" : "es"]
 
   return (
-    <main className="min-h-screen bg-[#231955] text-white">
+    <main className="min-h-screen bg-bg text-white">
       {/* Header fijo */}
       <SiteHeader />
 

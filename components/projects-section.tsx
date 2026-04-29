@@ -180,7 +180,7 @@ function CategoryButton({
     <button
       onClick={onClick}
       className={`px-6 py-2 rounded-full transition-all duration-300 ${
-        active ? "bg-[#892cdc] text-white font-medium" : "bg-[#231955] text-white/70 hover:bg-[#892cdc]/30"
+        active ? "bg-[#892cdc] text-white font-medium" : "bg-bg text-white/70 hover:bg-[#892cdc]/30"
       }`}
     >
       {children}

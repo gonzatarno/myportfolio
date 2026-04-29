@@ -26,6 +26,17 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  async rewrites() {
+    return [
+      // Iframe del prototipo Botmaker: redirige paths absolutos del bundle al subpath
+      { source: "/agent-avatar-nobg.png", destination: "/prototipo-botmaker/agent-avatar-nobg.png" },
+      { source: "/agent-construction.png", destination: "/prototipo-botmaker/agent-construction.png" },
+      { source: "/ai-agent-icon.png", destination: "/prototipo-botmaker/ai-agent-icon.png" },
+      { source: "/avatar-ai.svg", destination: "/prototipo-botmaker/avatar-ai.svg" },
+      { source: "/logo-bigpizza.jpeg", destination: "/prototipo-botmaker/logo-bigpizza.jpeg" },
+      { source: "/mcp-logo.png", destination: "/prototipo-botmaker/mcp-logo.png" },
+    ]
+  },
 };
 
 mergeConfig(nextConfig, userConfig);

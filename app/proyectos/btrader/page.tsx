@@ -139,7 +139,7 @@ export default function BtraderProjectPage() {
           <div className="mt-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Row 1 */}
-              <div className="bg-[#231955] rounded-xl overflow-hidden">
+              <div className="bg-bg rounded-xl overflow-hidden">
                 <div className="aspect-[4/3]">
                   <Image
                     src="/placeholder.svg?height=300&width=400"
@@ -150,7 +150,7 @@ export default function BtraderProjectPage() {
                   />
                 </div>
               </div>
-              <div className="bg-[#231955] rounded-xl overflow-hidden">
+              <div className="bg-bg rounded-xl overflow-hidden">
                 <div className="aspect-[4/3]">
                   <Image
                     src="/placeholder.svg?height=300&width=400"
@@ -161,7 +161,7 @@ export default function BtraderProjectPage() {
                   />
                 </div>
               </div>
-              <div className="bg-[#231955] rounded-xl overflow-hidden">
+              <div className="bg-bg rounded-xl overflow-hidden">
                 <div className="aspect-[4/3]">
                   <Image
                     src="/placeholder.svg?height=300&width=400"
@@ -174,7 +174,7 @@ export default function BtraderProjectPage() {
               </div>
 
               {/* Row 2 */}
-              <div className="bg-[#231955] rounded-xl overflow-hidden">
+              <div className="bg-bg rounded-xl overflow-hidden">
                 <div className="aspect-[4/3]">
                   <Image
                     src="/placeholder.svg?height=300&width=400"
@@ -185,7 +185,7 @@ export default function BtraderProjectPage() {
                   />
                 </div>
               </div>
-              <div className="bg-[#231955] rounded-xl overflow-hidden">
+              <div className="bg-bg rounded-xl overflow-hidden">
                 <div className="aspect-[4/3]">
                   <Image
                     src="/placeholder.svg?height=300&width=400"
@@ -196,7 +196,7 @@ export default function BtraderProjectPage() {
                   />
                 </div>
               </div>
-              <div className="bg-[#231955] rounded-xl overflow-hidden">
+              <div className="bg-bg rounded-xl overflow-hidden">
                 <div className="aspect-[4/3]">
                   <Image
                     src="/placeholder.svg?height=300&width=400"
@@ -209,7 +209,7 @@ export default function BtraderProjectPage() {
               </div>
 
               {/* Row 3 */}
-              <div className="bg-[#231955] rounded-xl overflow-hidden">
+              <div className="bg-bg rounded-xl overflow-hidden">
                 <div className="aspect-[4/3]">
                   <Image
                     src="/placeholder.svg?height=300&width=400"
@@ -220,7 +220,7 @@ export default function BtraderProjectPage() {
                   />
                 </div>
               </div>
-              <div className="bg-[#231955] rounded-xl overflow-hidden">
+              <div className="bg-bg rounded-xl overflow-hidden">
                 <div className="aspect-[4/3]">
                   <Image
                     src="/placeholder.svg?height=300&width=400"
@@ -231,7 +231,7 @@ export default function BtraderProjectPage() {
                   />
                 </div>
               </div>
-              <div className="bg-[#231955] rounded-xl overflow-hidden">
+              <div className="bg-bg rounded-xl overflow-hidden">
                 <div className="aspect-[4/3]">
                   <Image
                     src="/placeholder.svg?height=300&width=400"

@@ -144,7 +144,7 @@ export default function CallbotsProjectPage() {
             <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] px-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Row 1 */}
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-vXNE3HLdYdYCaAT6nQ8UXSLCVPcuos.png"
@@ -155,7 +155,7 @@ export default function CallbotsProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-egcftnpguwCwFsUyMCihTUgACDWv4x.png"
@@ -166,7 +166,7 @@ export default function CallbotsProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Re3FahLevItNnKQE8zBtQMqhBnOQlH.png"
@@ -179,7 +179,7 @@ export default function CallbotsProjectPage() {
                 </div>
 
                 {/* Row 2 */}
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-lQHuyCKtXX81YwpTDnuOefbW3OZvbS.png"
@@ -190,7 +190,7 @@ export default function CallbotsProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GzItYMwNX6Kp6mEs8AyZqzLH4UbZUr.png"
@@ -201,7 +201,7 @@ export default function CallbotsProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-o6Q3O1t0phARbPJR5K8WFns9HIP63c.png"
@@ -214,7 +214,7 @@ export default function CallbotsProjectPage() {
                 </div>
 
                 {/* Row 3 */}
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-L7h0nIq5BbBS46W7YR8iBVNSSXCIVt.png"
@@ -225,7 +225,7 @@ export default function CallbotsProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jHVlG76XW4aSbshp5TWiqjIFDXyahF.png"
@@ -236,7 +236,7 @@ export default function CallbotsProjectPage() {
                     />
                   </div>
                 </div>
-                <div className="bg-[#231955] rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="bg-bg rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl">
                   <div className="p-2">
                     <Image
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dhl9RPXKjLPuAvm7sgo8Jdrev0VOzS.png"

@@ -104,7 +104,7 @@ export default function MainMenu() {
 
       {/* Menú desplegable con animación */}
       <div
-        className={`fixed inset-0 bg-[#231955] z-40 flex flex-col items-center justify-center transition-all duration-500 ${
+        className={`fixed inset-0 bg-bg z-40 flex flex-col items-center justify-center transition-all duration-500 ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
