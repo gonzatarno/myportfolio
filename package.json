@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint",
-  "clean": "rm -rf .next && rm -rf node_modules/.cache"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "clean": "rm -rf .next && rm -rf node_modules/.cache"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
@@ -44,11 +44,12 @@
     "cmdk": "1.0.4",
     "date-fns": "4.1.0",
     "embla-carousel-react": "8.5.1",
+    "eslint-config-next": "^15.5.15",
     "framer-motion": "latest",
     "fs": "latest",
     "input-otp": "1.4.1",
     "lucide-react": "^0.454.0",
-    "next": "15.2.4",
+    "next": "^15.5.15",
     "next-themes": "latest",
     "path": "latest",
     "react": "^19",
